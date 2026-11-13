@@ -1,0 +1,42 @@
+/* Generated from design/tokens.json. Edit the JSON, then run: node design/build-tokens.mjs */
+:root {
+  --night-bg: #090A0C;
+  --night-surface: #111317;
+  --night-surface-raised: #191C21;
+  --night-surface-muted: #202329;
+  --night-text: #E9E4D8;
+  --night-muted: #A8A298;
+  --night-faint: #858177;
+  --night-gold: #D6B878;
+  --night-gold-hover: #EAD39F;
+  --night-accent-ink: #171611;
+  --night-border: #3A382F;
+  --night-border-strong: #6A6250;
+  --night-danger: #DB7770;
+  --night-success: #9FBF9A;
+  --night-info: #91B9C9;
+  --night-font-body: DM Sans;
+  --night-font-display: Cormorant Garamond;
+  --night-size-caption: 0.6875rem;
+  --night-size-small: 0.8125rem;
+  --night-size-body: 1rem;
+  --night-size-lead: 1.125rem;
+  --night-size-title: 1.75rem;
+  --night-size-display: clamp(3rem, 8vw, 5.5rem);
+  --night-line-body: 1.6;
+  --night-line-heading: 1.05;
+  --night-space-1: 0.25rem;
+  --night-space-2: 0.5rem;
+  --night-space-3: 0.75rem;
+  --night-space-4: 1rem;
+  --night-space-6: 1.5rem;
+  --night-space-8: 2rem;
+  --night-space-12: 3rem;
+  --night-space-16: 4rem;
+  --night-space-24: 6rem;
+  --night-radius-small: 2px;
+  --night-radius-medium: 6px;
+  --night-radius-large: 12px;
+  --night-radius-pill: 999px;
+  --night-content-width: 1060px;
+}

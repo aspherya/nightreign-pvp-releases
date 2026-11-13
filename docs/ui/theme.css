@@ -1,0 +1,37 @@
+/* Small Nightreign-flavored Bootstrap theme. Bootstrap provides the components and layout. */
+:root {
+  color-scheme: dark;
+  --bs-body-bg: var(--night-bg);
+  --bs-body-color: var(--night-text);
+  --bs-body-font-family: var(--night-font-body), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --bs-primary: var(--night-gold);
+  --bs-primary-rgb: 214, 184, 120;
+  --bs-secondary-color: var(--night-muted);
+  --bs-border-color: var(--night-border);
+  --bs-link-color: var(--night-gold);
+  --bs-link-color-rgb: 214, 184, 120;
+  --bs-link-hover-color: var(--night-gold-hover);
+  --bs-link-hover-color-rgb: 234, 211, 159;
+}
+
+body { background: var(--night-bg); color: var(--night-text); }
+a { text-underline-offset: 3px; }
+
+.btn-night { --bs-btn-color: #171611; --bs-btn-bg: var(--night-gold); --bs-btn-border-color: var(--night-gold); --bs-btn-hover-color: #171611; --bs-btn-hover-bg: var(--night-gold-hover); --bs-btn-hover-border-color: var(--night-gold-hover); --bs-btn-active-color: #171611; --bs-btn-active-bg: var(--night-gold-hover); --bs-btn-active-border-color: var(--night-gold-hover); --bs-btn-font-weight: 700; --bs-btn-font-size: .7rem; --bs-btn-letter-spacing: .14em; --bs-btn-border-radius: 2px; text-transform: uppercase; letter-spacing: .14em; }
+.btn-night-outline { --bs-btn-color: var(--night-text); --bs-btn-bg: var(--night-surface-raised); --bs-btn-border-color: var(--night-border-strong); --bs-btn-hover-color: var(--night-gold-hover); --bs-btn-hover-bg: #202329; --bs-btn-hover-border-color: var(--night-gold); --bs-btn-active-color: var(--night-gold-hover); --bs-btn-active-bg: #25272b; --bs-btn-active-border-color: var(--night-gold); --bs-btn-font-weight: 600; --bs-btn-font-size: .68rem; --bs-btn-letter-spacing: .12em; --bs-btn-border-radius: 2px; text-transform: uppercase; letter-spacing: .12em; }
+.btn-secondary { --bs-btn-color: var(--night-text); --bs-btn-bg: var(--night-surface-muted); --bs-btn-border-color: var(--night-border-strong); --bs-btn-hover-color: var(--night-gold-hover); --bs-btn-hover-bg: var(--night-surface-raised); --bs-btn-hover-border-color: var(--night-gold); --bs-btn-active-color: var(--night-gold-hover); --bs-btn-active-bg: var(--night-surface-raised); --bs-btn-active-border-color: var(--night-gold); --bs-btn-disabled-color: var(--night-muted); --bs-btn-disabled-bg: var(--night-surface); --bs-btn-disabled-border-color: var(--night-border); --bs-btn-font-weight: 600; --bs-btn-border-radius: 2px; }
+.text-night-muted { color: var(--night-muted) !important; }
+.border-night { border-color: var(--night-border) !important; }
+.bg-night-surface { background-color: var(--night-surface) !important; }
+.night-eyebrow { display: flex; align-items: center; gap: 12px; color: var(--night-gold); text-transform: uppercase; font-size: 10px; font-weight: 600; letter-spacing: .22em; }
+.night-eyebrow::before { content: ""; width: 28px; height: 1px; background: currentColor; }
+.night-display { font-family: var(--night-font-display), Georgia, serif; font-weight: 500; letter-spacing: -.035em; }
+.night-type-display { font: 500 var(--night-size-display)/var(--night-line-heading) var(--night-font-display), Georgia, serif; letter-spacing: -.035em; }
+.night-type-heading { font: 500 var(--night-size-title)/var(--night-line-heading) var(--night-font-display), Georgia, serif; }
+.night-type-body { font-size: var(--night-size-body); line-height: var(--night-line-body); }
+.night-type-small { font-size: var(--night-size-small); }
+.night-type-caption { font-size: var(--night-size-caption); letter-spacing: .06em; }
+.card { --bs-card-bg: var(--night-surface); --bs-card-color: var(--night-text); --bs-card-border-color: var(--night-border); }
+.form-control, .form-select { color: var(--night-text); background-color: var(--night-surface); border-color: var(--night-border); }
+.form-control::placeholder { color: var(--night-muted); }
+.form-control:focus, .form-select:focus { color: var(--night-text); background-color: var(--night-surface); border-color: var(--night-gold); box-shadow: 0 0 0 .25rem rgba(214,184,120,.15); }

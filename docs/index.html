@@ -1,181 +1,157 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Nightreign PvP</title>
-<meta name="description" content="A PvP Battle Royale mod for ELDEN RING NIGHTREIGN. Download the launcher: it installs the mod and keeps it up to date.">
-<meta property="og:title" content="Nightreign PvP">
-<meta property="og:description" content="A PvP Battle Royale mod for ELDEN RING NIGHTREIGN.">
-<meta property="og:image" content="crest.png">
-<link rel="icon" type="image/png" href="favicon.png">
-<style>
-  :root {
-    --bg: #0f1013;
-    --panel: #17191e;
-    --line: #2a2e36;
-    --text: #e6e3dc;
-    --muted: #9a9890;
-    --gold: #d6b46e;
-    --gold-hi: #e8c886;
-    --slate: #5a7280;
-  }
-  * { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; }
-  body {
-    margin: 0;
-    background: radial-gradient(ellipse 80% 50% at 50% 0%, #1d2027 0%, var(--bg) 70%) no-repeat, var(--bg);
-    color: var(--text);
-    font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  }
-  a { color: var(--gold); }
-  a:hover { color: var(--gold-hi); }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 0 16px; }
-
-  header.hero { text-align: center; padding: 64px 0 40px; }
-  .crest { width: 112px; height: 112px; }
-  h1 {
-    margin: 20px 0 8px;
-    font: 600 clamp(2rem, 7vw, 3.2rem)/1.1 Georgia, "Times New Roman", serif;
-    letter-spacing: .06em;
-    text-transform: uppercase;
-  }
-  .tag { margin: 0 auto; max-width: 34em; color: var(--muted); font-size: 1.08rem; }
-
-  .cta { margin-top: 32px; display: flex; flex-direction: column; align-items: center; gap: 10px; }
-  .btn {
-    display: inline-flex; align-items: center; gap: 10px;
-    padding: 14px 28px;
-    background: var(--gold); color: #15130e;
-    font-weight: 700; font-size: 1.05rem; text-decoration: none;
-    border-radius: 4px;
-    transition: background .15s;
-  }
-  .btn:hover { background: var(--gold-hi); color: #15130e; }
-  .btn svg { width: 20px; height: 20px; }
-  .meta { color: var(--muted); font-size: .9rem; min-height: 1.4em; }
-  .meta a { color: var(--muted); }
-
-  section { padding: 28px 0; border-top: 1px solid var(--line); }
-  h2 {
-    margin: 0 0 16px;
-    font: 600 .85rem/1 system-ui, sans-serif;
-    letter-spacing: .14em; text-transform: uppercase; color: var(--gold);
-  }
-  ol.steps { list-style: none; counter-reset: s; margin: 0; padding: 0; display: grid; gap: 14px; }
-  ol.steps li { counter-increment: s; display: grid; grid-template-columns: 34px 1fr; gap: 12px; align-items: start; }
-  ol.steps li::before {
-    content: counter(s);
-    width: 30px; height: 30px; display: grid; place-items: center;
-    border: 1px solid var(--slate); border-radius: 50%;
-    color: var(--text); font-weight: 600; font-size: .9rem;
-  }
-  ol.steps b { color: var(--text); }
-  ul.plain { margin: 0; padding-left: 1.2em; }
-  ul.plain li { margin: 4px 0; }
-  .note {
-    background: var(--panel); border: 1px solid var(--line); border-left: 3px solid var(--slate);
-    padding: 12px 16px; border-radius: 4px; color: var(--muted); font-size: .95rem;
-  }
-  .note b { color: var(--text); }
-  details { background: var(--panel); border: 1px solid var(--line); border-radius: 4px; padding: 12px 16px; }
-  summary { cursor: pointer; font-weight: 600; }
-  #notes { color: var(--muted); font-size: .95rem; }
-  #notes ul { padding-left: 1.2em; }
-  footer { padding: 32px 0 48px; border-top: 1px solid var(--line); color: var(--muted); font-size: .85rem; }
-  footer p { margin: 6px 0; }
-  kbd {
-    font: .85em ui-monospace, Consolas, monospace;
-    background: var(--panel); border: 1px solid var(--line); border-radius: 3px; padding: 1px 5px;
-  }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b0d11">
+  <title>Nightreign PvP</title>
+  <meta name="description" content="A PvP mod for ELDEN RING NIGHTREIGN: Battle Royale for up to 6 players and 1v1 Arena duels. Download the launcher and queue from the Roundtable.">
+  <meta property="og:title" content="Nightreign PvP: hunt each other">
+  <meta property="og:description" content="Battle Royale and Arena for ELDEN RING NIGHTREIGN. The other players are the threat now.">
+  <meta property="og:image" content="https://aspherya.github.io/nightreign-pvp-releases/crest.png">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.2/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="ui/tokens.css">
+  <link rel="stylesheet" href="ui/theme.css">
+  <link rel="stylesheet" href="site.css">
 </head>
 <body>
-<div class="wrap">
+  <main>
+    <section class="hero" id="top">
+      <header class="site-nav container-fluid px-3 px-lg-5 d-flex align-items-center justify-content-between">
+        <a class="brand" href="#top" aria-label="Nightreign PvP home"><img src="crest.png" alt=""><span>Nightreign PvP</span></a>
+        <nav class="nav-links" aria-label="Main navigation">
+          <a href="#modes">Modes</a><a href="#start">How to start</a>
+          <a class="btn btn-night-outline btn-sm" data-download href="https://github.com/aspherya/nightreign-pvp-releases/releases/latest/download/NightreignPvP-Launcher.exe">Download</a>
+        </nav>
+      </header>
+      <div class="hero-content">
+        <div class="night-eyebrow">A PvP mod for ELDEN RING NIGHTREIGN</div>
+        <h1>Hunt <em>each other.</em></h1>
+        <p class="hero-copy">Battle Royale and Arena for NIGHTREIGN. Drop into Limveld against up to five rival players, or settle it in a best-of-three duel. Same Nightfarers, same night, but now the other players are the threat.</p>
+        <div class="hero-actions d-flex align-items-center gap-4 flex-wrap">
+          <a class="btn btn-night btn-lg" data-download href="https://github.com/aspherya/nightreign-pvp-releases/releases/latest/download/NightreignPvP-Launcher.exe"><i class="bi bi-download" aria-hidden="true"></i>Download the launcher</a>
+          <a class="text-link" href="#modes">See the modes&nbsp; ↓</a>
+        </div>
+        <p class="release-meta" data-release-meta>Free · Windows</p>
+        <p class="release-meta mt-1">Needs ELDEN RING NIGHTREIGN on Steam and Seamless Co-op</p>
+      </div>
+      <div class="scroll">Two ways to fight</div>
+      <div class="side-note">Fan-made mod · Not affiliated with FromSoftware</div>
+    </section>
 
-  <header class="hero">
-    <img class="crest" src="crest.png" alt="">
-    <h1>Nightreign PvP</h1>
-    <p class="tag">A Battle Royale mod for ELDEN RING NIGHTREIGN. Land on Limveld as rivals, fight each other and the map, and be the last one standing.</p>
-    <div class="cta">
-      <a class="btn" id="download" href="https://github.com/aspherya/nightreign-pvp-releases/releases/latest/download/NightreignPvP-Launcher.exe">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 20h14"/></svg>
-        Download for Windows
-      </a>
-      <div class="meta" id="meta">Launcher · Windows · <a href="https://github.com/aspherya/nightreign-pvp-releases/releases">all releases</a></div>
-    </div>
-  </header>
+    <section class="site-section" id="modes">
+      <div class="container">
+        <div class="section-heading row align-items-end justify-content-between g-4">
+          <div class="col-lg-7"><div class="night-eyebrow">The modes</div><h2>Pick your fight.</h2></div>
+          <p class="col-lg-5">Both modes are cards in the Roundtable's expedition list. Pick one, press Commence and the mod finds your rivals. Every other card stays a normal expedition.</p>
+        </div>
+        <div class="row g-4 pt-5">
+          <div class="col-lg-6">
+            <article class="mode">
+              <div class="mode-kicker">Up to 6 players · Last one standing</div>
+              <h3>Battle Royale</h3>
+              <p>Drop into Limveld with up to five rivals. Loot, level up and hunt them down while the Night's Tide closes in. The last Nightfarer standing wins.</p>
+              <ul>
+                <li><i class="bi bi-x-octagon" aria-hidden="true"></i><span><b>Fall to a rival and you are out.</b> No respawn. Enemies, bosses and falls still give you the game's usual second chance.</span></li>
+                <li><i class="bi bi-box-seam" aria-hidden="true"></i><span><b>Their gear is yours.</b> A defeated rival drops their weapons and talismans where they fell.</span></li>
+                <li><i class="bi bi-eye-slash" aria-hidden="true"></i><span><b>No free intel.</b> Rivals never show on your map or compass, and Sites of Grace go dark mid-fight.</span></li>
+                <li><i class="bi bi-bullseye" aria-hidden="true"></i><span><b>No draws.</b> The final circle closes to a single point. Once you are out, watch the players still alive.</span></li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-lg-6">
+            <article class="mode">
+              <div class="mode-kicker">1v1 · Best of three</div>
+              <h3>Arena</h3>
+              <p>A straight duel in Heolstor's arena. No boss, no map, no farming. Bring the build you made at the Sparring Grounds and prove it.</p>
+              <ul>
+                <li><i class="bi bi-sliders" aria-hidden="true"></i><span><b>Even ground.</b> Everyone at level 15, every weapon at max upgrade, full flasks.</span></li>
+                <li><i class="bi bi-backpack" aria-hidden="true"></i><span><b>Your build.</b> You fight with your Sparring Equipment loadout, relics included.</span></li>
+                <li><i class="bi bi-stopwatch" aria-hidden="true"></i><span><b>3-minute rounds.</b> If time runs out, the player with more health takes the round.</span></li>
+                <li><i class="bi bi-lightning" aria-hidden="true"></i><span><b>Ultimates decide it.</b> Ultimate Arts are locked until round 3, which starts fully charged.</span></li>
+              </ul>
+            </article>
+          </div>
+        </div>
 
-  <section>
-    <h2>How to play</h2>
-    <ol class="steps">
-      <li><div><b>Download and run the launcher.</b> It finds your game, installs the mod and keeps both itself and the mod up to date.</div></li>
-      <li><div><b>Install Seamless Co-op</b> if you do not have it. The launcher opens its <a href="https://www.nexusmods.com/eldenringnightreign/mods/3?tab=files" rel="noopener">Nexus page</a> and installs the zip you download.</div></li>
-      <li><div><b>Press Play.</b> At the Roundtable, pick the <b>Battle Royale</b> card (the last expedition in the list), set the number of players to <b>Solo</b> and press <b>Commence</b>.</div></li>
-      <li><div><b>That is the last click.</b> When a match is found, everyone is brought together and the expedition starts on its own.</div></li>
-    </ol>
-  </section>
+        <div class="row g-5 pt-5 mt-1">
+          <div class="col-sm-6 col-lg-3 feature"><i class="bi bi-lightning-charge" aria-hidden="true"></i><h4>One click to queue</h4><p>Press Commence and wait. The match forms and the expedition starts with no more clicks.</p></div>
+          <div class="col-sm-6 col-lg-3 feature"><i class="bi bi-trophy" aria-hidden="true"></i><h4>Killfeed and scores</h4><p>Every down and kill on screen, and everyone's kills and deaths after the match.</p></div>
+          <div class="col-sm-6 col-lg-3 feature"><i class="bi bi-robot" aria-hidden="true"></i><h4>Practice with bots</h4><p>Turn Bots on to fight AI Nightfarers offline, in either mode.</p></div>
+          <div class="col-sm-6 col-lg-3 feature"><i class="bi bi-lock" aria-hidden="true"></i><h4>Private rooms</h4><p>Share a code with friends in the launcher and meet only each other.</p></div>
+        </div>
+      </div>
+    </section>
 
-  <section>
-    <h2>You need</h2>
-    <ul class="plain">
-      <li>ELDEN RING NIGHTREIGN on Steam (Windows)</li>
-      <li>Seamless Co-op for Nightreign (the launcher helps you install it)</li>
-      <li>The same mod version as the players you meet. The launcher updates you automatically.</li>
-    </ul>
-  </section>
+    <section class="site-section" id="start">
+      <div class="container">
+        <div class="section-heading row align-items-end justify-content-between g-4">
+          <div class="col-lg-7"><div class="night-eyebrow">How to start</div><h2>In the fight in three steps.</h2></div>
+          <p class="col-lg-5">You need ELDEN RING NIGHTREIGN on Steam and a Windows PC. The launcher handles the rest.</p>
+        </div>
+        <div class="row g-5 pt-5">
+          <article class="step col-md-4"><span class="step-no">I — DOWNLOAD</span><h3>Get the launcher</h3><p>One small Windows app. It finds your game, installs the mod and keeps both itself and the mod up to date.</p></article>
+          <article class="step col-md-4"><span class="step-no">II — SEAMLESS CO-OP</span><h3>Add Seamless Co-op</h3><p>The mod runs on top of it. If it is missing, the launcher opens its <a href="https://www.nexusmods.com/eldenringnightreign/mods/3?tab=files" rel="noopener">Nexus page</a> and installs the zip you download.</p></article>
+          <article class="step col-md-4"><span class="step-no">III — FIGHT</span><h3>Pick a card, press Commence</h3><p>Press Play in the launcher. At the Roundtable, choose the Battle Royale or Arena card, set Solo and press Commence.</p></article>
+        </div>
+        <p class="note"><b>Windows may warn you.</b> The launcher is not code-signed yet, so your browser or SmartScreen may call it uncommon. Keep the file, then choose <b>More info</b> &gt; <b>Run anyway</b> on the blue "Windows protected your PC" box.</p>
+        <p class="note"><b>Your normal game stays normal.</b> The mod only runs through the launcher, without anti-cheat and away from the official servers. Steam's own Play button still starts the regular game, and mod matches use Seamless Co-op's save, separate from your own.</p>
+      </div>
+    </section>
 
-  <section>
-    <h2>Before you run it</h2>
-    <p class="note"><b>Windows may warn you.</b> The launcher is not code-signed, so your browser or SmartScreen may say the file is uncommon. Keep the file, then on the blue "Windows protected your PC" box choose <b>More info</b> &gt; <b>Run anyway</b>.</p>
-    <p class="note"><b>Your normal game stays normal.</b> The mod runs only through the launcher, without anti-cheat and away from the official servers. Steam's own <kbd>Play</kbd> button still starts the regular game. Mod sessions use Seamless Co-op's save, separate from your vanilla save.</p>
-  </section>
+    <section class="download-section">
+      <div class="night-eyebrow">Your rivals are waiting</div>
+      <h2>Ready to fight?</h2>
+      <p>Free, for Windows. Everyone in a match needs the same mod version, and the launcher keeps you on the latest one.</p>
+      <a class="btn btn-night btn-lg" data-download href="https://github.com/aspherya/nightreign-pvp-releases/releases/latest/download/NightreignPvP-Launcher.exe"><i class="bi bi-download" aria-hidden="true"></i>Download the launcher</a>
+      <p class="release-meta" data-release-meta></p>
+      <details class="whatsnew" id="whatsnew" hidden>
+        <summary id="notes-title">What's new</summary>
+        <div id="notes"></div>
+      </details>
+    </section>
+  </main>
 
-  <section id="whatsnew" hidden>
-    <h2>What's new</h2>
-    <details>
-      <summary id="notes-title">Latest release</summary>
-      <div id="notes"></div>
-    </details>
-  </section>
-
-  <footer>
-    <p>Unofficial fan project. Not affiliated with or endorsed by FromSoftware, Bandai Namco or the author of Seamless Co-op. Use at your own risk.</p>
-    <p><a href="https://github.com/aspherya/nightreign-pvp-releases/releases">Releases</a></p>
+  <footer class="site-footer container-fluid px-3 px-lg-5 d-flex flex-wrap align-items-center justify-content-between gap-3">
+    <span>Nightreign PvP · A community project</span>
+    <span>Not affiliated with or endorsed by FromSoftware, Bandai Namco or the author of Seamless Co-op.</span>
+    <a href="https://github.com/aspherya/nightreign-pvp-releases/releases">All releases ↗</a>
   </footer>
 
-</div>
-<script>
-(function () {
-  var REPO = "aspherya/nightreign-pvp-releases";
-  var LAUNCHER = "NightreignPvP-Launcher.exe";
-  function mb(n) { return (n / 1048576).toFixed(0) + " MB"; }
-  function el(tag, text) { var e = document.createElement(tag); e.textContent = text; return e; }
+  <script>
+  (function () {
+    var REPO = "aspherya/nightreign-pvp-releases";
+    var LAUNCHER = "NightreignPvP-Launcher.exe";
+    function el(tag, text) { var e = document.createElement(tag); e.textContent = text; return e; }
 
-  fetch("https://api.github.com/repos/" + REPO + "/releases/latest", { headers: { Accept: "application/vnd.github+json" } })
-    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(function (rel) {
-      var asset = (rel.assets || []).filter(function (a) { return a.name === LAUNCHER; })[0];
-      var date = new Date(rel.published_at).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
-      var meta = document.getElementById("meta");
-      meta.textContent = rel.tag_name + " · " + date + (asset ? " · " + mb(asset.size) : "") + " · ";
-      var all = el("a", "all releases"); all.href = rel.html_url.replace(/\/tag\/.*$/, ""); meta.appendChild(all);
+    fetch("https://api.github.com/repos/" + REPO + "/releases/latest", { headers: { Accept: "application/vnd.github+json" } })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (rel) {
+        var asset = (rel.assets || []).filter(function (a) { return a.name === LAUNCHER; })[0];
+        var date = new Date(rel.published_at).toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
+        var line = rel.tag_name + " · " + date + (asset ? " · " + Math.round(asset.size / 1048576) + " MB" : "") + " · Windows";
+        document.querySelectorAll("[data-release-meta]").forEach(function (m) { m.textContent = line; });
 
-      // Release notes: a title line, "- " bullets and plain paragraphs. Built as text nodes, never as HTML.
-      var notes = document.getElementById("notes"), list = null, lines = (rel.body || "").split(/\r?\n/);
-      document.getElementById("notes-title").textContent = rel.name || rel.tag_name;
-      lines.forEach(function (line) {
-        line = line.trim();
-        if (!line || /^Built from source commit/i.test(line)) { list = null; return; }
-        if (line.indexOf("- ") === 0) {
-          if (!list) { list = document.createElement("ul"); notes.appendChild(list); }
-          list.appendChild(el("li", line.slice(2)));
-        } else { list = null; notes.appendChild(el("p", line)); }
-      });
-      if (notes.childNodes.length) document.getElementById("whatsnew").hidden = false;
-    })
-    .catch(function () { /* Offline or rate-limited: the static download link still works. */ });
-})();
-</script>
+        // Release notes: "- " bullets and plain paragraphs, built as text nodes, never as HTML.
+        var notes = document.getElementById("notes"), list = null;
+        document.getElementById("notes-title").textContent = "What's new in " + rel.tag_name;
+        (rel.body || "").split(/\r?\n/).forEach(function (raw) {
+          var t = raw.trim();
+          if (!t || /^Built from source commit/i.test(t)) { list = null; return; }
+          if (t.indexOf("- ") === 0) {
+            if (!list) { list = document.createElement("ul"); notes.appendChild(list); }
+            list.appendChild(el("li", t.slice(2)));
+          } else { list = null; notes.appendChild(el("p", t)); }
+        });
+        if (notes.childNodes.length) document.getElementById("whatsnew").hidden = false;
+      })
+      .catch(function () { /* Offline or rate-limited: the download links still work. */ });
+  })();
+  </script>
 </body>
 </html>
