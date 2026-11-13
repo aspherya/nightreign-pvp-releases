@@ -15,6 +15,11 @@
 .nav-links { display:flex; align-items:center; gap:36px; }
 .nav-links a:not(.btn) { color:#c8c2b5; text-decoration:none; text-transform:uppercase; font-size:12px; letter-spacing:.13em; }
 .nav-links a:hover { color:var(--night-gold-hover); }
+.nav-links .nav-icon { font-size:17px; line-height:1; margin-right:-16px; }
+.community { margin-top:44px; padding-top:36px; border-top:1px solid var(--night-border); max-width:520px; margin-inline:auto; }
+.community p { margin:0 auto 18px; }
+.community .btn { min-height:46px; padding-inline:20px; display:inline-flex; align-items:center; gap:.6rem; }
+.community .bi { font-size:1rem; line-height:1; }
 .hero-content { width:min(660px,calc(100% - 48px)); margin-left:clamp(24px,12vw,190px); padding-top:clamp(110px,18vh,190px); }
 .hero h1 { margin:24px 0 0; font-family:"Cormorant Garamond",serif; font-size:clamp(60px,8.6vw,116px); font-weight:500; line-height:.84; letter-spacing:-.045em; text-transform:uppercase; }
 .hero h1 em { display:block; margin-top:14px; font-style:normal; font-size:.6em; line-height:1.05; letter-spacing:.03em; color:var(--night-gold); }
